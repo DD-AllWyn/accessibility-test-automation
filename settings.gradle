@@ -1,0 +1,13 @@
+pluginManagement {
+    buildscript {
+        repositories {
+            flatDir {
+                dirs 'lib'
+            }
+        }
+        dependencies {
+            classpath fileTree(dir: 'lib', include: '*.jar')
+        }
+    }
+}
+rootProject.name = 'AllwynAccessibility'
