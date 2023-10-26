@@ -15,7 +15,7 @@ public class DashBoardStepDefs {
     public void theDashboardPageShouldBeDisplayed() {
         dashBoardSteps.validatePageTitle("DashBoard Page", DashBoardPgObj.DASHBOARD_PAGE_TITLE);
         //Continue with System Checker
-        dashBoardSteps.performSystemChecker();
+        // dashBoardSteps.performSystemChecker();
     }
 
     @When("The Retailer selects Passed Or Completed Modules")

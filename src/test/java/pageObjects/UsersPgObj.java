@@ -14,6 +14,9 @@ public class UsersPgObj {
     @FindBy(xpath = "//input[@id='id_first_name']")
     public WebElementFacade inputFirstName;
 
-    @FindBy(xpath = "(//td//a[contains(@href,'trainees')])[1]")
+    @FindBy(css = "(//td[contains(text(),'Retailer')])[1]")
     public WebElementFacade lnkRetailerName1;
+
+    @FindBy(xpath = "//a[contains(text(),'Personal details & account')]")
+    public WebElementFacade tabPersonalDetailsAndAccounts;
 }

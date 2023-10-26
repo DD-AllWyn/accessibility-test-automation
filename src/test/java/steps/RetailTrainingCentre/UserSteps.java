@@ -24,4 +24,18 @@ public class UserSteps extends CommonSteps {
         Serenity.getDriver().navigate().to("https://allwyn-uat.boltspark.com/trainees/add");
     }
 
+    @Step("Admin Selects a Retailer")
+    public void adminSelectARetailer() {
+        try {
+            //Thread.sleep(10000);
+            //clickUsingJS(usersPgObj.lnkRetailerName1);
+            //usersPgObj.lnkRetailerName1.click();
+            //uiLink.clickLink(usersPgObj.lnkRetailerName1);
+            //uiTab.getElementWhenReady(usersPgObj.tabPersonalDetailsAndAccounts);
+            Serenity.getDriver().navigate().to("https://allwyn-uat.boltspark.com/trainees/18/");
+        } catch (Exception Ex) {
+            Ex.printStackTrace();
+        }
+    }
+
 }

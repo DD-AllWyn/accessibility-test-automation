@@ -31,4 +31,9 @@ public class UsersStepDefs {
         userSteps.adminSelectCreateNewUser();
     }
 
+    @When("The Admin Selects Retailer From Users Table")
+    public void adminSelectsRetailerFromUsersTable() {
+        userSteps.adminSelectARetailer();
+    }
+
 }

@@ -33,7 +33,6 @@ public class TrainingDistributionStepDefs {
 
     @When("The Retailer selects Review")
     public void theRetailerSelectsReview() {
-        System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
         trainingDistributionSteps.selectsReview();
     }
 

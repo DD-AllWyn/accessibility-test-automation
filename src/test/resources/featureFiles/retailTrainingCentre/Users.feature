@@ -19,8 +19,7 @@ Feature: 'Users' Accessibility violation check
     Then Verify for accessibility violations and record if any
 
   @axe
-  Scenario: Check accessibility violations in 'Users - Create New User'
+  Scenario: Check accessibility violations in 'Retailer Account Page'
     When The Admin Selects Retailer From Users Table
-    Then The Create New User page should be Displayed
-    When The "Create New User" is scanned with Axe WCAG 2.2 AAA standards
+    When The "Retailer Account Page" is scanned with Axe WCAG 2.2 AAA standards
     Then Verify for accessibility violations and record if any

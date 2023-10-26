@@ -3,10 +3,10 @@ package steps;
 import com.allwyn.framework.utilities.reports.SerenityReport;
 import com.allwyn.framework.utilities.webElements.*;
 import net.serenitybdd.annotations.Steps;
+import net.serenitybdd.core.pages.PageObject;
+import net.serenitybdd.core.pages.WebElementFacade;
 
-import static net.serenitybdd.core.Serenity.getDriver;
-
-public class CommonSteps {
+public class CommonSteps extends PageObject {
     @Steps
     protected SerenityReport serenityReport;
     @Steps
@@ -27,6 +27,8 @@ public class CommonSteps {
     @Steps
     protected UIMenu uiMenu;
     @Steps
+    protected UITab uiTab;
+    @Steps
     protected UITextBox uiTextBox;
     @Steps
     protected UIRadioButton uiRadioButton;
@@ -41,10 +43,11 @@ public class CommonSteps {
         }
     */
     public void validatePageTitle(String prmPageName, String prmPageTitle) {
-        System.out.println("TITLE FOLLOWS");
-        System.out.println(getDriver().getTitle());
         String actualPageTitle = getDriver().getTitle().trim();
         serenityReport.logTestValidationReport("Title of " + prmPageName + " '" + prmPageTitle + "' is as expected", "Title of " + prmPageName + " does not match.", actualPageTitle.equalsIgnoreCase(prmPageTitle.trim()));
     }
 
+    protected void clickUsingJS(WebElementFacade prmWebElementFacade) {
+        evaluateJavascript("arguments[0].click()", prmWebElementFacade);
+    }
 }
