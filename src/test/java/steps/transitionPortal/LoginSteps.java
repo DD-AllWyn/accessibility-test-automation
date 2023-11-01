@@ -6,9 +6,9 @@ import com.allwyn.framework.pageObjects.web.transitionPortal.WelcomePgObj;
 import net.serenitybdd.annotations.Step;
 import net.serenitybdd.annotations.Steps;
 import net.serenitybdd.core.Serenity;
-import steps.CommonSteps;
+import steps.CommonAxeSteps;
 
-public class LoginSteps extends CommonSteps {
+public class LoginSteps extends CommonAxeSteps {
 
     @Steps
     WelcomePgObj welcomePgObj;

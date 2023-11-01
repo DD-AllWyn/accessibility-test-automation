@@ -3,21 +3,18 @@ package steps.RetailTrainingCentre;
 import com.allwyn.framework.pageObjects.web.RetailTraningCentre.DashBoardPgObj;
 import net.serenitybdd.annotations.Step;
 import net.serenitybdd.annotations.Steps;
-import pageObjects.DashBoard2PgObj;
-import steps.CommonSteps;
+import steps.CommonAxeSteps;
 
-public class DashBoardSteps extends CommonSteps {
-    @Steps
-    DashBoard2PgObj dashBoard2PgObj;
+public class DashBoardSteps extends CommonAxeSteps {
     @Steps
     DashBoardPgObj dashBoardPgObj;
 
     @Step("Complete System Checker")
     public void performSystemChecker() {
         try {
-            uiLink.clickLink(dashBoard2PgObj.lnkSystemChecker);
+            uiLink.clickLink(dashBoardPgObj.lnkSystemChecker);
             Thread.sleep(5000);
-            uiLink.clickLink(dashBoard2PgObj.btnCloseSystemChecker);
+            uiLink.clickLink(dashBoardPgObj.btnCloseSystemChecker);
             Thread.sleep(5000);
             uiLink.getElementWhenReady(dashBoardPgObj.lnkMyOwnTraining);
         } catch (Exception Ex) {
@@ -32,7 +29,7 @@ public class DashBoardSteps extends CommonSteps {
 
     @Step("Retailer selects Passed or Completed Modules")
     public void selectsPassedOrCompletedModule() {
-        uiLink.clickLink(dashBoard2PgObj.lnkModulesPassed);
+        uiLink.clickLink(dashBoardPgObj.lnkModulesPassed);
     }
 
     @Step("Retailer Logs Out")

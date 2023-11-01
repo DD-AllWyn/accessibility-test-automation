@@ -1,7 +1,7 @@
 package steps.RetailTrainingCentre;
 
-import steps.CommonSteps;
+import steps.CommonAxeSteps;
 
-public class MyTrainingSteps extends CommonSteps {
+public class MyTrainingSteps extends CommonAxeSteps {
 
 }

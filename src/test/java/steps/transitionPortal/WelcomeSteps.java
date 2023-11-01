@@ -4,11 +4,9 @@ import com.allwyn.framework.SerenityScenario;
 import com.allwyn.framework.pageObjects.web.transitionPortal.WelcomePgObj;
 import net.serenitybdd.annotations.Step;
 import net.serenitybdd.annotations.Steps;
-import steps.CommonSteps;
+import steps.CommonAxeSteps;
 
-import static net.serenitybdd.core.Serenity.getDriver;
-
-public class WelcomeSteps extends CommonSteps {
+public class WelcomeSteps extends CommonAxeSteps {
     @Steps
     WelcomePgObj welcomePgObj;
 

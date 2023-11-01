@@ -4,15 +4,12 @@ import com.allwyn.framework.pageObjects.web.transitionPortal.OnboardingPgObj;
 import io.cucumber.datatable.DataTable;
 import net.serenitybdd.annotations.Step;
 import net.serenitybdd.annotations.Steps;
-import steps.AxeSteps;
-import steps.CommonSteps;
+import steps.CommonAxeSteps;
 
 import java.util.Map;
 
-public class OnboardingSteps extends CommonSteps {
+public class OnboardingSteps extends CommonAxeSteps {
 
-    @Steps
-    AxeSteps axeSteps;
     @Steps
     OnboardingPgObj onboardingPgObj;
 

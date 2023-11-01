@@ -1,4 +1,4 @@
-@AccessibilityTestScenarios @RetailTrainingCentre
+@AccessibilityTestScenarios @RetailTrainingCentre @axe
 Feature: 'My Training page' Accessibility violation check
 
   Background:
@@ -6,7 +6,6 @@ Feature: 'My Training page' Accessibility violation check
     When The Retailer logs into Retail Training Centre
     Then The DashBoard Page should be displayed
 
-  @axe
   Scenario: Check accessibility violations in 'My Training page'
     When The Retailer Selects My Own Training
     Then The My Training page should be Displayed

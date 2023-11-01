@@ -21,7 +21,6 @@ public class TestTearDown {
         }
     }
 
-
     public void setTestNameInSauceLabs(Scenario prmScenario) {
         WebDriverFacade webDriverFacade = (WebDriverFacade) Serenity.getDriver();
         System.out.println(webDriverFacade.getCapabilities().getBrowserName());

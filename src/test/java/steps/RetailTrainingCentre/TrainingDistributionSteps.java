@@ -1,11 +1,11 @@
 package steps.RetailTrainingCentre;
 
+import com.allwyn.framework.pageObjects.web.RetailTraningCentre.TrainingDistributionPgObj;
 import net.serenitybdd.annotations.Step;
 import net.serenitybdd.annotations.Steps;
-import pageObjects.TrainingDistributionPgObj;
-import steps.CommonSteps;
+import steps.CommonAxeSteps;
 
-public class TrainingDistributionSteps extends CommonSteps {
+public class TrainingDistributionSteps extends CommonAxeSteps {
 
     @Steps
     TrainingDistributionPgObj trainingDistributionPgObj;

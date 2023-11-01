@@ -1,9 +1,9 @@
 package stepDefinitions.RetailTraniningCentre;
 
+import com.allwyn.framework.pageObjects.web.RetailTraningCentre.UsersPgObj;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.annotations.Steps;
-import pageObjects.UsersPgObj;
 import steps.RetailTrainingCentre.UserSteps;
 
 public class UsersStepDefs {

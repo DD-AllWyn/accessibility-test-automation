@@ -1,4 +1,4 @@
-@AccessibilityTestScenarios @RetailTrainingCentre
+@AccessibilityTestScenarios @RetailTrainingCentre @axe
 Feature: 'Sign-In Page' Accessibility violation check
 
   Scenario: Check accessibility violations in 'Sign-In page'

@@ -1,7 +1,6 @@
-@AccessibilityTestScenarios @RetailTrainingCentre
+@AccessibilityTestScenarios @RetailTrainingCentre @axe
 Feature: 'DashBoard Page' Accessibility violation check
 
-  @axe
   Scenario: Check accessibility violations in 'Dashboard page'
     Given The Retailer navigates to Retail Training Centre Sign-In Page
     When The Retailer logs into Retail Training Centre

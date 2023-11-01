@@ -4,7 +4,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-        features = "src/test/resources/featureFiles/retailTrainingCentre/Users.feature"
+        features = "src/test/resources/featureFiles/retailTrainingCentre/"
         , glue = {"stepDefinitions", "hooks"}
         , plugin = {"pretty", "html:target/cucumber-html-report", "json:target/cucumber_report.json"}
         , tags = ("@axe")

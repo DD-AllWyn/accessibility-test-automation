@@ -1,4 +1,4 @@
-@AccessibilityTestScenarios @RetailTrainingCentre
+@AccessibilityTestScenarios @RetailTrainingCentre @axe
 Feature: 'Users' Accessibility violation check
 
   Background:
@@ -12,13 +12,13 @@ Feature: 'Users' Accessibility violation check
     When The "Users Page" is scanned with Axe WCAG 2.2 AAA standards
     Then Verify for accessibility violations and record if any
 
+#The scenario fails - Create New User Link is not present in the Application
   Scenario: Check accessibility violations in 'Users - Create New User'
     When The Admin Selects Create New User
     Then The Create New User page should be Displayed
     When The "Create New User" is scanned with Axe WCAG 2.2 AAA standards
     Then Verify for accessibility violations and record if any
 
-  @axe
   Scenario: Check accessibility violations in 'Retailer Account Page'
     When The Admin Selects Retailer From Users Table
     When The "Retailer Account Page" is scanned with Axe WCAG 2.2 AAA standards

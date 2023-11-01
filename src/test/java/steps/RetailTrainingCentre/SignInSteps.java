@@ -4,11 +4,9 @@ import com.allwyn.framework.SerenityScenario;
 import com.allwyn.framework.pageObjects.web.RetailTraningCentre.SignInPgObj;
 import net.serenitybdd.annotations.Step;
 import net.serenitybdd.annotations.Steps;
-import steps.CommonSteps;
+import steps.CommonAxeSteps;
 
-import static net.serenitybdd.core.Serenity.getDriver;
-
-public class SignInSteps extends CommonSteps {
+public class SignInSteps extends CommonAxeSteps {
     @Steps
     SignInPgObj signInPgObj;
 

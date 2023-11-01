@@ -8,16 +8,13 @@ import net.serenitybdd.annotations.Step;
 import net.serenitybdd.annotations.Steps;
 import net.serenitybdd.core.Serenity;
 import net.thucydides.core.webdriver.WebDriverFacade;
-import steps.AxeSteps;
-import steps.CommonSteps;
+import steps.CommonAxeSteps;
 
 import java.io.IOException;
 
-public class RegisterSteps extends CommonSteps {
+public class RegisterSteps extends CommonAxeSteps {
 
     final String emailAddress = Serenity.sessionVariableCalled("emailAddress");
-    @Steps
-    AxeSteps axeSteps;
     @Steps
     WelcomePgObj welcomePgObj;
 

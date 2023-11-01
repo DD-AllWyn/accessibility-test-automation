@@ -1,12 +1,12 @@
 package steps.RetailTrainingCentre;
 
+import com.allwyn.framework.pageObjects.web.RetailTraningCentre.UsersPgObj;
 import net.serenitybdd.annotations.Step;
 import net.serenitybdd.annotations.Steps;
 import net.serenitybdd.core.Serenity;
-import pageObjects.UsersPgObj;
-import steps.CommonSteps;
+import steps.CommonAxeSteps;
 
-public class UserSteps extends CommonSteps {
+public class UserSteps extends CommonAxeSteps {
 
     @Steps
     UsersPgObj usersPgObj;
@@ -27,6 +27,7 @@ public class UserSteps extends CommonSteps {
     @Step("Admin Selects a Retailer")
     public void adminSelectARetailer() {
         try {
+            //TODO CHANGE THE CODE WHEN THE APPLICATION IS STABLE
             //Thread.sleep(10000);
             //clickUsingJS(usersPgObj.lnkRetailerName1);
             //usersPgObj.lnkRetailerName1.click();

@@ -14,8 +14,8 @@ public class DashBoardStepDefs {
     @Then("The DashBoard Page should be displayed")
     public void theDashboardPageShouldBeDisplayed() {
         dashBoardSteps.validatePageTitle("DashBoard Page", DashBoardPgObj.DASHBOARD_PAGE_TITLE);
-        //Continue with System Checker
-        // dashBoardSteps.performSystemChecker();
+        //Continue with System Checker - System Checker Warning message appears only for Chrome
+        //dashBoardSteps.performSystemChecker();
     }
 
     @When("The Retailer selects Passed Or Completed Modules")
