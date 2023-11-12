@@ -1,12 +1,14 @@
 pluginManagement {
     buildscript {
         repositories {
+            mavenCentral()
             flatDir {
                 dirs 'lib'
             }
         }
         dependencies {
             classpath fileTree(dir: 'lib', include: '*.jar')
+            classpath 'net.serenity-bdd:serenity-single-page-report:4.0.14'
         }
     }
 }
