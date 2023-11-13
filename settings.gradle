@@ -12,4 +12,4 @@ pluginManagement {
         }
     }
 }
-rootProject.name = 'AllwynAccessibility'
+rootProject.name = 'accessibility-test-automation'
