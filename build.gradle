@@ -6,7 +6,7 @@ plugins {
 wrapper {
     gradleVersion = '8.0.2'
 }
-defaultTasks 'clean', 'initialise', 'test', 'aggregate', 'reports'
+defaultTasks 'clean', 'initialise', 'test', 'aggregate'
 group 'org.allwyn'
 version '1.0-SNAPSHOT'
 
