@@ -1,9 +1,9 @@
 package steps.transitionPortal;
 
-import com.allwyn.framework.pageObjects.web.transitionPortal.OnboardingPgObj;
 import io.cucumber.datatable.DataTable;
 import net.serenitybdd.annotations.Step;
 import net.serenitybdd.annotations.Steps;
+import pageObjects.transitionPortal.OnboardingPageObject;
 import steps.CommonAxeSteps;
 
 import java.util.Map;
@@ -11,7 +11,7 @@ import java.util.Map;
 public class OnboardingSteps extends CommonAxeSteps {
 
     @Steps
-    OnboardingPgObj onboardingPgObj;
+    OnboardingPageObject onboardingPageObject;
 
     //////////////////////////UNUSED CODE///////////////////////////
     @Step("retailer completes onboarding")
@@ -32,7 +32,7 @@ public class OnboardingSteps extends CommonAxeSteps {
         String storeAddressTown = dataMap.get("store_address_town");
         String storeAddressPostcode = dataMap.get("store_address_postcode");
 
-        uiButton.clickOn(onboardingPgObj.btnContinue);
+        uiButton.clickOn(onboardingPageObject.btnContinue);
     }
 
 }

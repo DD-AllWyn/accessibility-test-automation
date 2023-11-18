@@ -1,15 +1,15 @@
 package steps.RetailTrainingCentre;
 
-import com.allwyn.framework.pageObjects.web.RetailTraningCentre.UsersPgObj;
 import net.serenitybdd.annotations.Step;
 import net.serenitybdd.annotations.Steps;
 import net.serenitybdd.core.Serenity;
+import pageObjects.RetailTraningCentre.UsersPageObject;
 import steps.CommonAxeSteps;
 
 public class UserSteps extends CommonAxeSteps {
 
     @Steps
-    UsersPgObj usersPgObj;
+    UsersPageObject usersPageObject;
 
     @Step("Retailer selects 'Users' Menu")
     public void selectsUsersMenu() {

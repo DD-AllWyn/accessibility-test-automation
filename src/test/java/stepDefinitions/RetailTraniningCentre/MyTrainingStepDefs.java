@@ -1,8 +1,9 @@
 package stepDefinitions.RetailTraniningCentre;
 
-import com.allwyn.framework.pageObjects.web.RetailTraningCentre.MyTrainingPgObj;
+
 import io.cucumber.java.en.Then;
 import net.serenitybdd.annotations.Steps;
+import pageObjects.RetailTraningCentre.MyTrainingPageObject;
 import steps.RetailTrainingCentre.MyTrainingSteps;
 
 public class MyTrainingStepDefs {
@@ -12,7 +13,7 @@ public class MyTrainingStepDefs {
 
     @Then("The My Training page should be Displayed")
     public void theMyTrainingPageShouldBeDisplayed() {
-        myTrainingSteps.validatePageTitle("My Training Page", MyTrainingPgObj.MYTRAINING_PAGE_TITLE);
+        myTrainingSteps.validatePageTitle("My Training Page", MyTrainingPageObject.MYTRAINING_PAGE_TITLE);
     }
 
 }

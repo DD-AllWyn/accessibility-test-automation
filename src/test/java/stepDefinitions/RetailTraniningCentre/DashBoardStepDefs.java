@@ -1,9 +1,9 @@
 package stepDefinitions.RetailTraniningCentre;
 
-import com.allwyn.framework.pageObjects.web.RetailTraningCentre.DashBoardPgObj;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.annotations.Steps;
+import pageObjects.RetailTraningCentre.DashBoardPageObject;
 import steps.RetailTrainingCentre.DashBoardSteps;
 
 public class DashBoardStepDefs {
@@ -13,7 +13,7 @@ public class DashBoardStepDefs {
 
     @Then("The DashBoard Page should be displayed")
     public void theDashboardPageShouldBeDisplayed() {
-        dashBoardSteps.validatePageTitle("DashBoard Page", DashBoardPgObj.DASHBOARD_PAGE_TITLE);
+        dashBoardSteps.validatePageTitle("DashBoard Page", DashBoardPageObject.DASHBOARD_PAGE_TITLE);
         //Continue with System Checker - System Checker Warning message appears only for Chrome
         //dashBoardSteps.performSystemChecker();
     }

@@ -1,22 +1,22 @@
 package steps.RetailTrainingCentre;
 
-import com.allwyn.framework.pageObjects.web.RetailTraningCentre.DashBoardPgObj;
 import net.serenitybdd.annotations.Step;
 import net.serenitybdd.annotations.Steps;
+import pageObjects.RetailTraningCentre.DashBoardPageObject;
 import steps.CommonAxeSteps;
 
 public class DashBoardSteps extends CommonAxeSteps {
     @Steps
-    DashBoardPgObj dashBoardPgObj;
+    DashBoardPageObject dashBoardPageObject;
 
     @Step("Complete System Checker")
     public void performSystemChecker() {
         try {
-            uiLink.clickLink(dashBoardPgObj.lnkSystemChecker);
+            uiLink.clickLink(dashBoardPageObject.lnkSystemChecker);
             Thread.sleep(5000);
-            uiLink.clickLink(dashBoardPgObj.btnCloseSystemChecker);
+            uiLink.clickLink(dashBoardPageObject.btnCloseSystemChecker);
             Thread.sleep(5000);
-            uiLink.getElementWhenReady(dashBoardPgObj.lnkMyOwnTraining);
+            uiLink.getElementWhenReady(dashBoardPageObject.lnkMyOwnTraining);
         } catch (Exception Ex) {
             Ex.printStackTrace();
         }
@@ -24,17 +24,17 @@ public class DashBoardSteps extends CommonAxeSteps {
 
     @Step("Retailer selects My Own Training")
     public void selectsMyOwnTraining() {
-        uiLink.clickLink(dashBoardPgObj.lnkMyOwnTraining);
+        uiLink.clickLink(dashBoardPageObject.lnkMyOwnTraining);
     }
 
     @Step("Retailer selects Passed or Completed Modules")
     public void selectsPassedOrCompletedModule() {
-        uiLink.clickLink(dashBoardPgObj.lnkModulesPassed);
+        uiLink.clickLink(dashBoardPageObject.lnkModulesPassed);
     }
 
     @Step("Retailer Logs Out")
     public void logOutOfRetailTrainingCentre() {
-        uiLink.clickLink(dashBoardPgObj.lnkUser);
-        uiLink.clickLink(dashBoardPgObj.lnkSignOut);
+        uiLink.clickLink(dashBoardPageObject.lnkUser);
+        uiLink.clickLink(dashBoardPageObject.lnkSignOut);
     }
 }

@@ -1,9 +1,9 @@
 package stepDefinitions.RetailTraniningCentre;
 
-import com.allwyn.framework.pageObjects.web.RetailTraningCentre.UsersPgObj;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.annotations.Steps;
+import pageObjects.RetailTraningCentre.UsersPageObject;
 import steps.RetailTrainingCentre.UserSteps;
 
 public class UsersStepDefs {
@@ -18,12 +18,12 @@ public class UsersStepDefs {
 
     @Then("The Users page should be Displayed")
     public void theUsersPageShouldBeDisplayed() {
-        userSteps.validatePageTitle("Users Page", UsersPgObj.USERS_PAGE_TITLE);
+        userSteps.validatePageTitle("Users Page", UsersPageObject.USERS_PAGE_TITLE);
     }
 
     @Then("The Create New User page should be Displayed")
     public void createNewUsersPageShouldBeDisplayed() {
-        userSteps.validatePageTitle("Create New Users Page", UsersPgObj.CREATENEWUSER_PAGE_TITLE);
+        userSteps.validatePageTitle("Create New Users Page", UsersPageObject.CREATENEWUSER_PAGE_TITLE);
     }
 
     @When("The Admin Selects Create New User")

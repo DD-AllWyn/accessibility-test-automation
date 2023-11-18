@@ -1,9 +1,9 @@
 package stepDefinitions.RetailTraniningCentre;
 
-import com.allwyn.framework.pageObjects.web.RetailTraningCentre.TrainingDistributionPgObj;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.annotations.Steps;
+import pageObjects.RetailTraningCentre.TrainingDistributionPageObject;
 import steps.RetailTrainingCentre.TrainingDistributionSteps;
 
 public class TrainingDistributionStepDefs {
@@ -13,7 +13,7 @@ public class TrainingDistributionStepDefs {
 
     @Then("The Training Distribution Page should be displayed")
     public void theTrainingDistributionPageShouldBeDisplayed() {
-        trainingDistributionSteps.validatePageTitle("Training Distribution Page", TrainingDistributionPgObj.TRAININGDISTRIBUTION_PAGE_TITLE);
+        trainingDistributionSteps.validatePageTitle("Training Distribution Page", TrainingDistributionPageObject.TRAININGDISTRIBUTION_PAGE_TITLE);
     }
 
     @When("The Retailer selects Distribute Training")
@@ -38,6 +38,6 @@ public class TrainingDistributionStepDefs {
 
     @Then("The Distribute Training Page should be displayed")
     public void theDistributeTrainingPageShouldBeDisplayed() {
-        trainingDistributionSteps.validatePageTitle("Distribute Training Page", TrainingDistributionPgObj.DISTRIBUTETRAINING_PAGE_TITLE);
+        trainingDistributionSteps.validatePageTitle("Distribute Training Page", TrainingDistributionPageObject.DISTRIBUTETRAINING_PAGE_TITLE);
     }
 }
