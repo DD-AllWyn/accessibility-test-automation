@@ -6,8 +6,8 @@ import net.serenitybdd.annotations.Step;
 import net.serenitybdd.annotations.Steps;
 import net.serenitybdd.core.Serenity;
 import net.thucydides.core.webdriver.WebDriverFacade;
-import pageObjects.transitionPortal.RegisterPageObject;
-import pageObjects.transitionPortal.WelcomePageObject;
+import com.allwyn.framework.pageObjects.transitionPortal.RegisterPageObject;
+import com.allwyn.framework.pageObjects.transitionPortal.WelcomePageObject;
 import steps.CommonAxeSteps;
 
 import java.io.IOException;

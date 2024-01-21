@@ -1,4 +1,4 @@
-package pageObjects.RetailTraningCentre;
+package com.allwyn.framework.pageObjects.RetailTraningCentre;
 
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.WebElementFacade;

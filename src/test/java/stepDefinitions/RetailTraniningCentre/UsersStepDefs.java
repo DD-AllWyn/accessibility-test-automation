@@ -3,7 +3,7 @@ package stepDefinitions.RetailTraniningCentre;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.annotations.Steps;
-import pageObjects.RetailTraningCentre.UsersPageObject;
+import com.allwyn.framework.pageObjects.RetailTraningCentre.UsersPageObject;
 import steps.RetailTrainingCentre.UserSteps;
 
 public class UsersStepDefs {

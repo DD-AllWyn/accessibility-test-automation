@@ -3,7 +3,7 @@ package steps.RetailTrainingCentre;
 
 import net.serenitybdd.annotations.Step;
 import net.serenitybdd.annotations.Steps;
-import pageObjects.RetailTraningCentre.TrainingDistributionPageObject;
+import com.allwyn.framework.pageObjects.RetailTraningCentre.TrainingDistributionPageObject;
 import steps.CommonAxeSteps;
 
 public class TrainingDistributionSteps extends CommonAxeSteps {
@@ -14,6 +14,7 @@ public class TrainingDistributionSteps extends CommonAxeSteps {
     @Step("Retailer selects Distribute Training")
     public void selectsDistributeTraining() {
         uiLink.clickLink(trainingDistributionPageObject.lnkDistributeTraining);
+
         boolean elementExist = uiDropDown.getElementWhenReady(trainingDistributionPageObject.ddwTypesOfUser);
         serenityReport.logTestValidationReport("Select Users Tab is displayed as expected", "Select Users Tab is not displayed", elementExist);
     }

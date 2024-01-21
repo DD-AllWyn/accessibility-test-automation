@@ -3,7 +3,7 @@ package steps.RetailTrainingCentre;
 import net.serenitybdd.annotations.Step;
 import net.serenitybdd.annotations.Steps;
 import net.serenitybdd.core.Serenity;
-import pageObjects.RetailTraningCentre.UsersPageObject;
+import com.allwyn.framework.pageObjects.RetailTraningCentre.UsersPageObject;
 import steps.CommonAxeSteps;
 
 public class UserSteps extends CommonAxeSteps {

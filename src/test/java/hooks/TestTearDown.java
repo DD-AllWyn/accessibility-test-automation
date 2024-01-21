@@ -16,7 +16,7 @@ public class TestTearDown {
     public void updateScenarioStatus(Scenario prmScenario) {
         TestOutcome testOutcome = StepEventBus.getEventBus().getBaseStepListener().getCurrentTestOutcome();
         if (testOutcome.isSuccess()) {
-            ScenarioList.updateScenarioStatusInScenariosListFiles(prmScenario);
+            ScenarioList.updateScenarioStatusInScenariosListFiles(prmScenario,3);
             setTestNameInSauceLabs(prmScenario);
         }
     }

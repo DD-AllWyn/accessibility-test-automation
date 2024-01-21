@@ -1,4 +1,4 @@
-package pageObjects.RetailTraningCentre;
+package com.allwyn.framework.pageObjects.RetailTraningCentre;
 
 import net.serenitybdd.core.pages.PageObject;
 

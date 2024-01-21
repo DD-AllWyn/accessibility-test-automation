@@ -12,7 +12,8 @@ public class TestSetup {
         SerenityScenario.readConfigurations();
         System.setProperty("fileCount", "1");
     }
-
+    @Steps
+    DataGenerator dataGenerator;
     @Steps
     SerenityScenario serenityScenario;
 
@@ -24,9 +25,9 @@ public class TestSetup {
     @Before(value = "@AccessibilityTestScenarios")
     public void initialiseTestData(Scenario prmScenario) {
         //TODO Session Variable is used in Transition Portal. Refactor the code when we work on Accessibility Test Scenarios
-        String emailAddress = DataGenerator.getRandomEmailAddressForMailosaur(
-                DataGenerator.generateFirstName(),
-                DataGenerator.generateLastName()
+        String emailAddress = dataGenerator.getRandomEmailAddressForMailosaur(
+                dataGenerator.generateFirstName(),
+                dataGenerator.generateLastName()
         );
         Serenity.setSessionVariable("emailAddress").to(emailAddress);
         serenityScenario.initialiseScenario(prmScenario.getId());

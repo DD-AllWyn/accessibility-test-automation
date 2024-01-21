@@ -2,7 +2,7 @@ package steps.RetailTrainingCentre;
 
 import net.serenitybdd.annotations.Step;
 import net.serenitybdd.annotations.Steps;
-import pageObjects.RetailTraningCentre.DashBoardPageObject;
+import com.allwyn.framework.pageObjects.RetailTraningCentre.DashBoardPageObject;
 import steps.CommonAxeSteps;
 
 public class DashBoardSteps extends CommonAxeSteps {

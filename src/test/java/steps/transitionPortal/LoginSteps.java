@@ -3,8 +3,8 @@ package steps.transitionPortal;
 import net.serenitybdd.annotations.Step;
 import net.serenitybdd.annotations.Steps;
 import net.serenitybdd.core.Serenity;
-import pageObjects.transitionPortal.LoginPageObject;
-import pageObjects.transitionPortal.WelcomePageObject;
+import com.allwyn.framework.pageObjects.transitionPortal.LoginPageObject;
+import com.allwyn.framework.pageObjects.transitionPortal.WelcomePageObject;
 import steps.CommonAxeSteps;
 
 public class LoginSteps extends CommonAxeSteps {

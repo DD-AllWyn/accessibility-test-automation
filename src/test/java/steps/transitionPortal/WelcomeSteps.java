@@ -3,7 +3,7 @@ package steps.transitionPortal;
 import com.allwyn.framework.SerenityScenario;
 import net.serenitybdd.annotations.Step;
 import net.serenitybdd.annotations.Steps;
-import pageObjects.transitionPortal.WelcomePageObject;
+import com.allwyn.framework.pageObjects.transitionPortal.WelcomePageObject;
 import steps.CommonAxeSteps;
 
 public class WelcomeSteps extends CommonAxeSteps {

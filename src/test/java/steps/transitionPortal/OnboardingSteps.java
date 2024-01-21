@@ -3,7 +3,7 @@ package steps.transitionPortal;
 import io.cucumber.datatable.DataTable;
 import net.serenitybdd.annotations.Step;
 import net.serenitybdd.annotations.Steps;
-import pageObjects.transitionPortal.OnboardingPageObject;
+import com.allwyn.framework.pageObjects.transitionPortal.OnboardingPageObject;
 import steps.CommonAxeSteps;
 
 import java.util.Map;

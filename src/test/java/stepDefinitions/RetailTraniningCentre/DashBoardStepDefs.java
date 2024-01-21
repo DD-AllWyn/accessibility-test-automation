@@ -3,7 +3,7 @@ package stepDefinitions.RetailTraniningCentre;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.annotations.Steps;
-import pageObjects.RetailTraningCentre.DashBoardPageObject;
+import com.allwyn.framework.pageObjects.RetailTraningCentre.DashBoardPageObject;
 import steps.RetailTrainingCentre.DashBoardSteps;
 
 public class DashBoardStepDefs {

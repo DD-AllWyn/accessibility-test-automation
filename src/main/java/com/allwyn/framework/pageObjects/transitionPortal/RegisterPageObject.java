@@ -1,4 +1,4 @@
-package pageObjects.transitionPortal;
+package com.allwyn.framework.pageObjects.transitionPortal;
 
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.PageObject;

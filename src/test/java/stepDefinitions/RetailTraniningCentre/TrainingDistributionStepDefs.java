@@ -3,7 +3,7 @@ package stepDefinitions.RetailTraniningCentre;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.annotations.Steps;
-import pageObjects.RetailTraningCentre.TrainingDistributionPageObject;
+import com.allwyn.framework.pageObjects.RetailTraningCentre.TrainingDistributionPageObject;
 import steps.RetailTrainingCentre.TrainingDistributionSteps;
 
 public class TrainingDistributionStepDefs {

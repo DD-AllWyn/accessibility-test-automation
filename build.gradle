@@ -1,12 +1,12 @@
 plugins {
-    id "net.serenity-bdd.serenity-gradle-plugin" version "4.0.14"
+    id "net.serenity-bdd.serenity-gradle-plugin" version "4.0.27"
     id 'java'
     id 'idea'
 }
 wrapper {
     gradleVersion = '8.0.2'
 }
-defaultTasks 'clean', 'initialise', 'test', 'aggregate'
+defaultTasks 'clean', 'test', 'aggregate'
 group 'org.allwyn'
 version '1.0-SNAPSHOT'
 
@@ -27,8 +27,8 @@ java {
 
 ext {
     slf4jVersion = '1.7.7'
-    junitVersion = '5.8.2'
-    serenityCoreVersion = '4.0.18'
+    junitVersion = '5.10.1'
+    serenityCoreVersion = '4.0.28'
     assertJVersion = '3.22.0'
     logbackVersion = '1.2.10'
 }
@@ -69,6 +69,7 @@ dependencies {
             //SINGLE PAGE HTML REPORT
             "net.serenity-bdd:serenity-single-page-report:${serenityCoreVersion}"
     //ALLWYN COMMON LIBRARIES
+    implementation 'junit:junit:4.13.1'
     implementation fileTree(dir: 'lib', include: '*.jar')
     testImplementation "org.junit.jupiter:junit-jupiter-engine:${junitVersion}"
 }

@@ -3,7 +3,7 @@ package steps.RetailTrainingCentre;
 import com.allwyn.framework.SerenityScenario;
 import net.serenitybdd.annotations.Step;
 import net.serenitybdd.annotations.Steps;
-import pageObjects.RetailTraningCentre.SignInPageObject;
+import com.allwyn.framework.pageObjects.RetailTraningCentre.SignInPageObject;
 import steps.CommonAxeSteps;
 
 public class SignInSteps extends CommonAxeSteps {
