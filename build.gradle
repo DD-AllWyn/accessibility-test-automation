@@ -1,31 +1,36 @@
-plugins {
+plugins
+{
     id "net.serenity-bdd.serenity-gradle-plugin" version "4.0.27"
     id 'java'
     id 'idea'
 }
-wrapper {
+wrapper
+{
     gradleVersion = '8.0.2'
 }
 defaultTasks 'clean', 'test', 'aggregate'
 group 'org.allwyn'
 version '1.0-SNAPSHOT'
 
-repositories {
+repositories
+{
     mavenCentral()
     maven {
         url "https://packages.atlassian.com/mvn/maven-external/"
     }
     flatDir
-            {
-                dirs 'lib'
-            }
+    {
+        dirs 'lib'
+    }
 }
-java {
+java
+{
     sourceCompatibility = JavaVersion.VERSION_11
     targetCompatibility = JavaVersion.VERSION_11
 }
 
-ext {
+ext
+{
     slf4jVersion = '1.7.7'
     junitVersion = '5.10.1'
     serenityCoreVersion = '4.0.28'
@@ -41,7 +46,8 @@ ext {
 
 //LINK - HOW TO EXCLUDE MODULES TO AVOID TRANSITIVE DEPENDENCY ISSUES
 //https://roytuts.com/how-to-exclude-dependencies-in-gradle-based-java-project/#:~:text=If%20you%20want%20to%20exclude,more%20in%20a%20separate%20line.&text=As%20an%20alternative%20way%2C%20you,%2C%20testCompile%2C%20and%20testRuntime%20classpaths.
-dependencies {
+dependencies
+{
     implementation "net.serenity-bdd:serenity-core:${serenityCoreVersion}",
             "net.serenity-bdd:serenity-junit5:${serenityCoreVersion}",
             "net.serenity-bdd:serenity-cucumber:${serenityCoreVersion}",
@@ -73,16 +79,14 @@ dependencies {
     implementation fileTree(dir: 'lib', include: '*.jar')
     testImplementation "org.junit.jupiter:junit-jupiter-engine:${junitVersion}"
 }
-serenity {
+serenity
+{
     reports = ['single-page-html']
-    testRoot = "starter"
-}
-task initialise(type: JavaExec) {
-    classpath = sourceSets.main.runtimeClasspath
-    main = 'testGradle'
 }
 
-test {
+
+test
+{
     //useJUnitPlatform()
     testLogging.showStandardStreams = true
     maxParallelForks = 1
@@ -97,4 +101,10 @@ test.finalizedBy(aggregate)
 {
     executable "gradlew.bat"
     args 'test', '--tests', 'RunnerToGenerate*'
-}*/
+}
+
+task initialise(type: JavaExec) {
+    classpath = sourceSets.main.runtimeClasspath
+    main = 'testGradle'
+}
+ */
