@@ -1,8 +1,10 @@
 package hooks;
 
+import com.allwyn.framework.SerenityScenario;
 import com.allwyn.framework.utilities.file.ScenarioList;
 import io.cucumber.java.After;
 import io.cucumber.java.Scenario;
+import net.serenitybdd.annotations.Steps;
 import net.serenitybdd.core.Serenity;
 import net.thucydides.core.steps.StepEventBus;
 import net.thucydides.core.webdriver.WebDriverFacade;
@@ -11,6 +13,13 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class TestTearDown {
+    @Steps
+    SerenityScenario serenityScenario;
+
+    @After(order = 0)
+    public void updateScenarioExecutionStatus(Scenario argScenario) {
+        serenityScenario.logScenarioStatus(argScenario);
+    }
 
     @After(value = "@AccessibilityTest", order = 1)
     public void updateScenarioStatus(Scenario prmScenario) {

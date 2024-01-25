@@ -8,7 +8,7 @@ wrapper
 {
     gradleVersion = '8.0.2'
 }
-defaultTasks 'clean', 'test', 'aggregate'
+
 group 'org.allwyn'
 version '1.0-SNAPSHOT'
 
@@ -49,47 +49,53 @@ ext
 dependencies
 {
     implementation "net.serenity-bdd:serenity-core:${serenityCoreVersion}",
-            "net.serenity-bdd:serenity-junit5:${serenityCoreVersion}",
-            "net.serenity-bdd:serenity-cucumber:${serenityCoreVersion}",
-            "net.serenity-bdd:serenity-screenplay:${serenityCoreVersion}",
-            "net.serenity-bdd:serenity-screenplay-webdriver:${serenityCoreVersion}",
-            "net.serenity-bdd:serenity-ensure:2.3.5",
-            "org.junit.jupiter:junit-jupiter-api:${junitVersion}",
-            "org.assertj:assertj-core:${assertJVersion}",
-            "ch.qos.logback:logback-classic:${logbackVersion}",
-            //API TESTING
-            "net.serenity-bdd:serenity-rest-assured:${serenityCoreVersion}",
-            //JSON FILE PARSER
-            "com.jayway.jsonpath:json-path:2.4.0",
-            //ACCESSIBILITY TESTING
-            "com.deque.html.axe-core:selenium:4.7.0",
-            //JIRA-BUG REPORTING
-            "com.atlassian.jira:jira-rest-java-client-core:5.2.6",
-            "io.atlassian.fugue:fugue:5.0.0",
-            //DATA GENERATION LIBRARIES
-            'com.github.javafaker:javafaker:1.0.2',
-            "com.github.spullara.mustache.java:compiler:0.9.10",
-            //MAIL SERVER TESTING
-            "com.mailosaur:mailosaur-java:7.12.0",
-            "com.aspose:aspose-ocr:22.5",
-            //SINGLE PAGE HTML REPORT
-            "net.serenity-bdd:serenity-single-page-report:${serenityCoreVersion}"
-    //ALLWYN COMMON LIBRARIES
+    "net.serenity-bdd:serenity-junit5:${serenityCoreVersion}",
+    "net.serenity-bdd:serenity-cucumber:${serenityCoreVersion}",
+    "org.assertj:assertj-core:${assertJVersion}",
+    "ch.qos.logback:logback-classic:${logbackVersion}",
+
+    //API TESTING
+    "net.serenity-bdd:serenity-rest-assured:${serenityCoreVersion}",
+    //JSON FILE PARSER
+    "com.jayway.jsonpath:json-path:2.4.0",
+    //ACCESSIBILITY TESTING
+    "com.deque.html.axe-core:selenium:4.7.0",
+    //JIRA-BUG REPORTING
+    "com.atlassian.jira:jira-rest-java-client-core:5.2.6",
+    "io.atlassian.fugue:fugue:5.0.0",
+    //DATA GENERATION LIBRARIES
+    'com.github.javafaker:javafaker:1.0.2',
+    "com.github.spullara.mustache.java:compiler:0.9.10",
+    //MAIL SERVER TESTING
+    "com.mailosaur:mailosaur-java:7.12.0",
+    "com.aspose:aspose-ocr:22.5",
+    //SINGLE PAGE HTML REPORT
+    "net.serenity-bdd:serenity-single-page-report:${serenityCoreVersion}",
+    // PARALLEL EXECUTION
+    'org.junit.platform:junit-platform-launcher:1.10.1',
+    'org.junit.platform:junit-platform-suite:1.10.1',
+    'io.cucumber:cucumber-junit-platform-engine:7.14.1',
+    'org.junit.jupiter:junit-jupiter-api:5.10.1'
+
     implementation 'junit:junit:4.13.1'
-    implementation fileTree(dir: 'lib', include: '*.jar')
-    testImplementation "org.junit.jupiter:junit-jupiter-engine:${junitVersion}"
+    //ALLWYN COMMON LIBRARIES
+    testImplementation fileTree(dir: 'lib', include: '*.jar')
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${junitVersion}"
 }
 serenity
 {
     reports = ['single-page-html']
 }
 
-
-test
-{
-    //useJUnitPlatform()
+task junitTest(type: Test) {
+    useJUnitPlatform()
     testLogging.showStandardStreams = true
-    maxParallelForks = 1
+    systemProperties System.getProperties()
+}
+
+
+task cucumberTest(type: Test) {
+    testLogging.showStandardStreams = true
     systemProperties System.getProperties()
 }
 
