@@ -10,8 +10,7 @@ import net.serenitybdd.core.Serenity;
 public class TestSetup {
     static {
         SerenityScenario.readConfigurations();
-        System.setProperty("fileCount", "1");
-    }
+         }
     @Steps
     DataGenerator dataGenerator;
     @Steps
