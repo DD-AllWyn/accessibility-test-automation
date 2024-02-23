@@ -23,29 +23,29 @@ public class RegisterSteps extends CommonAxeSteps {
 
     @Step("retailer {0} {1} enters registration details")
     public void goToRegistrationAndEnterDetails(String prmRetailerId, String prmPostcode) {
-        uiMenu.clickOn(welcomePageObject.btnRegister);
-        uiTextBox.TypeInto(registerPageObject.inputRetailerId, prmRetailerId);
-        uiTextBox.TypeInto(registerPageObject.inputEmailAddress, emailAddress);
-        uiTextBox.TypeInto(registerPageObject.inputPostcode, prmPostcode);
-        uiButton.clickOn(registerPageObject.btnSubmit);
+        welcomePageObject.btnRegister.click();
+        uiTextBox.enterText(registerPageObject.inputRetailerId, prmRetailerId);
+        uiTextBox.enterText(registerPageObject.inputEmailAddress, emailAddress);
+        uiTextBox.enterText(registerPageObject.inputPostcode, prmPostcode);
+        registerPageObject.btnSubmit.click();
     }
 
     @Step("retailer {0} {1} registers")
     public void register(String prmRetailerId, String prmPostcode, String prmLast3Digits)
             throws MailosaurException, IOException {
         // Register
-        uiMenu.clickOn(welcomePageObject.btnRegister);
+        welcomePageObject.btnRegister.click();
 
         // Retailer details
-        uiTextBox.TypeInto(registerPageObject.inputRetailerId, prmRetailerId);
-        uiTextBox.TypeInto(registerPageObject.inputPostcode, prmPostcode);
-        uiButton.clickOn(registerPageObject.btnSubmit);
+        uiTextBox.enterText(registerPageObject.inputRetailerId, prmRetailerId);
+        uiTextBox.enterText(registerPageObject.inputPostcode, prmPostcode);
+       registerPageObject.btnSubmit.click();
 
         // Proprietor details
-        uiTextBox.TypeInto(registerPageObject.inputLast3BankAccountDigits, prmLast3Digits);
-        uiTextBox.TypeInto(registerPageObject.inputEmailAddress, emailAddress);
-        uiTextBox.TypeInto(registerPageObject.inputEmailAddressConfirm, emailAddress);
-        uiButton.clickOn(registerPageObject.btnSubmit);
+        uiTextBox.enterText(registerPageObject.inputLast3BankAccountDigits, prmLast3Digits);
+        uiTextBox.enterText(registerPageObject.inputEmailAddress, emailAddress);
+        uiTextBox.enterText(registerPageObject.inputEmailAddressConfirm, emailAddress);
+        registerPageObject.btnSubmit.click();
 
         // Verification email link
         EmailClient emailClient = new EmailClient();
@@ -53,9 +53,9 @@ public class RegisterSteps extends CommonAxeSteps {
         webDriverFacade.get(emailClient.getTransitionPortalVerificationLink(emailAddress));
 
         // Password
-        uiTextBox.TypeInto(registerPageObject.inputPassword, "Password1!");
-        uiTextBox.TypeInto(registerPageObject.inputPasswordConfirm, "Password1!");
-        uiButton.clickOn(registerPageObject.btnSubmit);
+        uiTextBox.enterText(registerPageObject.inputPassword, "Password1!");
+        uiTextBox.enterText(registerPageObject.inputPasswordConfirm, "Password1!");
+       registerPageObject.btnSubmit.click();
     }
 
 }

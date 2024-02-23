@@ -17,13 +17,13 @@ public class OnboardingStepDefs {
 
     //////////////////////////UNUSED CODE///////////////////////////
     @When("the retailer completes onboarding")
-    public void retailerEntersRegistrationDetails(DataTable prmData) {
-        onboardingSteps.completeOnboarding(prmData);
+    public void retailerEntersRegistrationDetails(DataTable argData) {
+        onboardingSteps.completeOnboarding(argData);
     }
 
     @When("the retailer completes full onboarding")
-    public void completeFullOnboarding(String prmRetailerId, String prmStorePostcode, String prmLast3Digits)
+    public void completeFullOnboarding(String argRetailerId, String argStorePostcode, String argLast3Digits)
             throws MailosaurException, IOException {
-        registerSteps.register(prmRetailerId, prmStorePostcode, prmLast3Digits);
+        registerSteps.register(argRetailerId, argStorePostcode, argLast3Digits);
     }
 }

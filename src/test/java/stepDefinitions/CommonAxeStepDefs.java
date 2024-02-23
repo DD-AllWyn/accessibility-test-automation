@@ -10,8 +10,8 @@ public class CommonAxeStepDefs {
     CommonAxeSteps commonAxeSteps;
 
     @When("The {string} is scanned with Axe WCAG 2.2 AAA standards")
-    public void performAxeAccessibilityScan(String pageName) {
-        commonAxeSteps.performAccessibilityScan(pageName);
+    public void performAxeAccessibilityScan(String argPageName) {
+        commonAxeSteps.performAccessibilityScan(argPageName);
     }
 
     @Then("Verify for accessibility violations and record if any")

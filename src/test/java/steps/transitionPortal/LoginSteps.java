@@ -17,21 +17,21 @@ public class LoginSteps extends CommonAxeSteps {
 
     @Step("retailer {0} {1} logs in")
     public void login(String prmRetailerId, String prmPassword) {
-        uiMenu.clickOn(WelcomePageObject.btnLogin);
-        uiTextBox.TypeInto(loginPageObject.inputRetailerId, prmRetailerId);
-        uiTextBox.TypeInto(loginPageObject.inputEmailAddress,
+        WelcomePageObject.btnLogin.click();
+        uiTextBox.enterText(loginPageObject.inputRetailerId, prmRetailerId);
+        uiTextBox.enterText(loginPageObject.inputEmailAddress,
                 Serenity.sessionVariableCalled("emailAddress"));
-        uiTextBox.TypeInto(loginPageObject.inputPassword, prmPassword);
-        uiButton.clickOn(loginPageObject.btnSubmit);
+        uiTextBox.enterText(loginPageObject.inputPassword, prmPassword);
+        loginPageObject.btnSubmit.click();
     }
 
     //////////////////////////UNUSED CODE///////////////////////////
     @Step("retailer selects login and enters login {0} {1} {3}")
     public void gotToLoginAndEnterLoginDetails(String prmRetailerId, String prmEmailAddress,
                                                String prmPassword) {
-        uiMenu.clickOn(WelcomePageObject.btnLogin);
-        uiTextBox.TypeInto(loginPageObject.inputRetailerId, prmRetailerId);
-        uiTextBox.TypeInto(loginPageObject.inputEmailAddress, prmEmailAddress);
-        uiTextBox.TypeInto(loginPageObject.inputPassword, prmPassword);
+        WelcomePageObject.btnLogin.click();
+        uiTextBox.enterText(loginPageObject.inputRetailerId, prmRetailerId);
+        uiTextBox.enterText(loginPageObject.inputEmailAddress, prmEmailAddress);
+        uiTextBox.enterText(loginPageObject.inputPassword, prmPassword);
     }
 }

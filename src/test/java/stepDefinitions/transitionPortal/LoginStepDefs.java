@@ -9,13 +9,13 @@ public class LoginStepDefs {
     LoginSteps loginSteps;
 
     @When("the retailer {string} logs in")
-    public void retailerEntersRegistrationDetails(String prmRetailerId) {
-        loginSteps.login(prmRetailerId, "Password1!");
+    public void retailerEntersRegistrationDetails(String argRetailerId) {
+        loginSteps.login(argRetailerId, "Password1!");
     }
 
     //////////////////////////UNUSED CODE///////////////////////////
     @When("the retailer logs in with {string} {string} {string}")
-    public void retailerLogsIn(String prmRetailerId, String prmEmailAddress, String prmPassword) {
-        loginSteps.gotToLoginAndEnterLoginDetails(prmRetailerId, prmEmailAddress, prmPassword);
+    public void retailerLogsIn(String argRetailerId, String argEmailAddress, String argPassword) {
+        loginSteps.gotToLoginAndEnterLoginDetails(argRetailerId, argEmailAddress, argPassword);
     }
 }

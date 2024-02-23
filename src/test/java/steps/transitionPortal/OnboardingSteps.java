@@ -32,7 +32,7 @@ public class OnboardingSteps extends CommonAxeSteps {
         String storeAddressTown = dataMap.get("store_address_town");
         String storeAddressPostcode = dataMap.get("store_address_postcode");
 
-        uiButton.clickOn(onboardingPageObject.btnContinue);
+        onboardingPageObject.btnContinue.click();
     }
 
 }

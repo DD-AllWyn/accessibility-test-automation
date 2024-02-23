@@ -23,6 +23,6 @@ public class SignInSteps extends CommonAxeSteps {
     public void retailerSignsIn() {
         uiTextBox.typeInto(signInPageObject.inputEmailAddress, SerenityScenario.configProp.getProperty("retailTrainingCentre.UserName"));
         uiTextBox.typeInto(signInPageObject.inputPassword, SerenityScenario.configProp.getProperty("retailTrainingCentre.Password"));
-        uiButton.clickButton(signInPageObject.btnSignIn);
+        signInPageObject.btnSignIn.click();
     }
 }

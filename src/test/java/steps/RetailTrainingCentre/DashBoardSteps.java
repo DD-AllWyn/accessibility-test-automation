@@ -12,9 +12,9 @@ public class DashBoardSteps extends CommonAxeSteps {
     @Step("Complete System Checker")
     public void performSystemChecker() {
         try {
-            uiLink.clickLink(dashBoardPageObject.lnkSystemChecker);
+         dashBoardPageObject.lnkSystemChecker.click();
             Thread.sleep(5000);
-            uiLink.clickLink(dashBoardPageObject.btnCloseSystemChecker);
+           dashBoardPageObject.btnCloseSystemChecker.click();
             Thread.sleep(5000);
             uiLink.getElementWhenReady(dashBoardPageObject.lnkMyOwnTraining);
         } catch (Exception Ex) {
@@ -24,17 +24,17 @@ public class DashBoardSteps extends CommonAxeSteps {
 
     @Step("Retailer selects My Own Training")
     public void selectsMyOwnTraining() {
-        uiLink.clickLink(dashBoardPageObject.lnkMyOwnTraining);
+        dashBoardPageObject.lnkMyOwnTraining.click();
     }
 
     @Step("Retailer selects Passed or Completed Modules")
     public void selectsPassedOrCompletedModule() {
-        uiLink.clickLink(dashBoardPageObject.lnkModulesPassed);
+        dashBoardPageObject.lnkModulesPassed.click();
     }
 
     @Step("Retailer Logs Out")
     public void logOutOfRetailTrainingCentre() {
-        uiLink.clickLink(dashBoardPageObject.lnkUser);
-        uiLink.clickLink(dashBoardPageObject.lnkSignOut);
+       dashBoardPageObject.lnkUser.click();
+        dashBoardPageObject.lnkSignOut.click();
     }
 }

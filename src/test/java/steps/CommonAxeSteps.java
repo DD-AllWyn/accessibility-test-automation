@@ -19,27 +19,18 @@ public class CommonAxeSteps extends PageObject {
     @Steps
     protected SerenityReport serenityReport;
     @Steps
-    protected UIButton uiButton;
-    @Steps
-    protected UICheckBox uiCheckBox;
-    @Steps
     protected UIDropDown uiDropDown;
     @Steps
     protected UIHeader uiHeader;
     @Steps
-    protected UILabel uiLabel;
-    @Steps
     protected UILink uiLink;
-    @Steps
-    protected UIList uiList;
+
     @Steps
     protected UIMenu uiMenu;
-    @Steps
-    protected UITab uiTab;
+
     @Steps
     protected UITextBox uiTextBox;
-    @Steps
-    protected UIRadioButton uiRadioButton;
+
 
     public void validatePageTitle(String prmPageName, String prmPageTitle) {
         String actualPageTitle = getDriver().getTitle().trim();

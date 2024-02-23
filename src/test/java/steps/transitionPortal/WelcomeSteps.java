@@ -12,12 +12,12 @@ public class WelcomeSteps extends CommonAxeSteps {
 
     @Step("retailer selects register")
     public void goToRegistration() {
-        uiMenu.clickOn(welcomePageObject.btnRegister);
+        welcomePageObject.btnRegister.click();
     }
 
     @Step("retailer selects login")
     public void gotToLogin() {
-        uiMenu.clickOn(welcomePageObject.btnLogin);
+        welcomePageObject.btnLogin.click();
     }
 
     @Step("Navigate to National Lottery Transition Portal")

@@ -29,7 +29,7 @@ public class ParentElement extends PageObject {
      * @param prmWebElement
      * @return true when the mobile element is ready
      */
-    public boolean getElementWhenReady(WebElementFacade prmWebElement) {
+    public  boolean getElementWhenReady(WebElementFacade prmWebElement) {
 
         for (int retry = 1; retry < MAX_RETRIES; retry++) {
             try {
